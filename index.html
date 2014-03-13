@@ -1,42 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="login.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
-<title >Patient Information</title>
-</head>
-<script type="text/javascript" src="patientInfo.js"></script>
-<body onload="check()">
-        <label class="headers">Patient Information</label>
-        <p></p>
-        <label> Full Name: </label><label id="insertFullName">Name</Label>
-        <p></p>
-        <label> Date of Birth: </label><label id="insertDOB">DOB</Label>
-        <p></p>
-        <label>Account Balance: </label><label id="insertDOB"></Label>
-        <p></p>
-        <label class="headers"><font size="5"> <b>Contact Info:</b></font></label>
-        <p></p>
-        <label> Home Phone Number: </label><label id="insertHomePhone"></Label>
-        <p></p>
-        <label> Cell Phone Number: </label><label id="insertCellPhone"></Label>
-        <p></p> 
-        <label>Office Name:</label><label id="insertPhone2"></Label>
-        <p></p> 
-        <label>Provider:</label><label id="insertPhone2"></Label>
-   
- 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">	<head>
+		<title>Patient Information</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="patientInfo.js"></script>
+		<!-- <link rel="stylesheet" type="text/css" href="appointment.css"> -->
+	</head>
+	<body>
+		<!-- <p id="appt">
+		Appointments -->
+		<button type="button" onclick="check()">Click Me!</button>
 
+		<div id="ContentArea"></div>
+	</body>
+</html>
 
-<script type="text/javascript" src="menuLink.js"></script>
- <div class="menuClass">
-	<button type="submit" onclick="redirect('./patientInfo.html')"><img src="./house.jpg"></button>
-	<button type="submit" onclick="redirect('./appointment.html')"><img  >app</button>
-	<button type="submit" onclick="redirect('../optometrist/prescription.html')" ><img >presc</button>
-	<button type="submit" onclick="redirect('./medicationPage.html')" ><img >meds</button>
- 
-</div>
- 
- </body>
-</html
