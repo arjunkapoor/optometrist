@@ -1,16 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">	<head>
-		<title>Patient Information</title>
-		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="patientInfo.js"></script>
-		<!-- <link rel="stylesheet" type="text/css" href="appointment.css"> -->
-	</head>
-	<body>
-		<!-- <p id="appt">
-		Appointments -->
-		<button type="button" onclick="check()">Click Me!</button>
-
-		<div id="ContentArea"></div>
-	</body>
-</html>
-
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Prescriptions</title>
+	<link rel="stylesheet" type="text/css" href="prescription.css">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="prescription.js"></script>
+	<script type="text/javascript">
+	</script>
+</head>
+<body>
+	<p id="presc">
+		Prescription
+	</p>
+	<div class="spectacle">
+		<button type="button" onclick="spec()">Spectacle</button>
+		<div id="specArea"></div>
+	</div>
+	<div class="contact_lens">
+		<button type="button" onclick="cLens()">Contact Lens Rx</button>
+		<div id="lensArea"></div>
+	</div>
+	<div class="dignostic_codes">
+		<button type="button" onclick="diagCode()">Diagnostic Codes</button>
+		<div id="diagArea"></div>
+	</div>
