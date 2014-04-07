@@ -1,42 +1,34 @@
-function check(){
-// Start function when DOM has completely loaded 
-$(document).ready(function(){ 
-
-	// Open the patientDataExample.xml file
-	$.get("patientDataExample.xml",{},function(xml){
-      	
-		// Build an HTML string
-		myHTMLOutput = '';
-	 	myHTMLOutput += '<table width="98%" border="1" cellpadding="0" cellspacing="0">';
-	  	myHTMLOutput += '<th>Full Name</th><th>Date of Birth</th>';
-	  	
-		// Run the function for each student tag in the XML file
-		$('patient',xml).each(function(i) {
-			FirstName = $(this).find("firstName").text();
-			LastName = $(this).find("lastName").text();
-			DOB = $(this).find("dateOfBirth").text();
-
-			// Build row HTML data and store in string
-			mydata = BuildPatientHTML(FirstName, LastName, DOB);
-			myHTMLOutput = myHTMLOutput + mydata;
-		});
-		myHTMLOutput += '</table>';
+function check() {
+		var homePhone =document.getElementById('insertHomePhone');
+		var cellPhone =document.getElementById('insertCellPhone');
+		var dateOfBirth =document.getElementById('insertDOB');
+		var fullName = document.getElementById('insertFullName')
+			$.ajax({
+				type: "GET",
+				url: "patientDataExample.xml",
+				dataType: "xml",
+				success: function(xml){
+					var firstName = $(xml).find('firstName').text();
+					var lastName = $(xml).find('lastName').text();
+					var fullDOB = $(xml).find('dateOfBirth').text();
+					var dob = fullDOB.split('T');
+					dateOfBirth.innerHTML = dob[0];
+					fullName.innerHTML = firstName + " " + lastName;
+					$(xml).find('contactInfos').each(function(){
+						var id = $(this).find('subType').text();
+						if (id === "phone_home" || id=== "phone_cell"){
+							if(id === "phone_home"){
+								var phoneNum = $(this).find('value').text();
+								homePhone.innerHTML = phoneNum;
+							}//end if
+						else{
+							var phoneNum = $(this).find('value').text();
+							cellPhone.innerHTML = phoneNum;
+							}//end else
+						}//end if
+					});//end xml.find.each
+				}//end success
+			});//end ajax
 		
-		// Update the DIV called Content Area with the HTML string
-		$("#ContentArea").append(myHTMLOutput);
-	});
-});
-}
-
- 
- function BuildPatientHTML(firstName, lastName, dateOfBirth){
-	
-	// Build HTML string and return
-	output = '';
-    output += '<tr>';
-	output += '<td>'+ firstName + lastName + '</td>';
-    output += '<td>'+ DOB +'</td>';
-	output += '</tr>';
-	return output;
-}
-	 
+     
+     }	 
