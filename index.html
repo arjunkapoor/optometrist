@@ -1,27 +1,62 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Prescriptions</title>
-	<link rel="stylesheet" type="text/css" href="prescription.css">
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="prescription.js"></script>
-	<script type="text/javascript">
-	</script>
+  <meta charset="UTF-8">
+  <title>Patient Information</title>
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+  <script type="text/javascript" src="js/patientInfo.js"></script>
 </head>
+
 <body>
-	<p id="presc">
-		Prescription
-	</p>
-	<div class="spectacle">
-		<button type="button" onclick="spec()">Spectacle</button>
-		<div id="specArea"></div>
+
+	<script type="text/javascript">
+                $(document).ready(function(){
+                        check();
+                });
+    </script>
+
+	<!-- Navigation -->
+	<nav id="slide-menu">
+		<ul>
+			<li class="patientinfo"><a href="patientInfo.html">Patient Info</a></li>
+			<li class="appointments"><a href="appointment.html">Appointments</a></li>
+			<li class="prescriptions"><a href="prescription.html">Prescriptions</a></li>
+			<li class="medications"><a href="medications.html">Medications</a></li>
+			<li class="sep logout"><a href="home.html">Logout</a></li>
+		</ul>
+	</nav>
+	
+	<!-- Content panel -->
+	<div id="content">
+		<div>
+			<div class="menu-trigger"></div>
+			<h1>Patient Information</h1>
+			<div class="patientInfo">
+				<p class="subheading"><b>Account Information</b></p>
+				<p>Account Balance:		$123.45</p>
+				<label> Full Name: </label><label id="insertFullName"></label>
+				<p></p>
+				<label> Date of Birth: </label><label id="insertDOB"></label>
+			</div>
+			<div class="contactInfo">
+				<p class="subheading"><b>Contact Information</b></p>
+				<p></p>
+        		<label> Home Phone: </label><label id="insertHomePhone"></label>
+				<p></p>
+        		<label> Mobile Phone: </label><label id="insertCellPhone"></label>
+        		<p></p> 
+        		<label>Office Name:</label><label id="insertPhone2"></label>
+				<p></p> 
+        		<label>Provider:</label><label id="insertPhone2"></label>
+			</div>
+		</div>
 	</div>
-	<div class="contact_lens">
-		<button type="button" onclick="cLens()">Contact Lens Rx</button>
-		<div id="lensArea"></div>
-	</div>
-	<div class="dignostic_codes">
-		<button type="button" onclick="diagCode()">Diagnostic Codes</button>
-		<div id="diagArea"></div>
-	</div>
+
+	<!--Slide Menu Script-->
+	<script src="js/slidemenu.js"></script>
+
+</body>
+
+</html>
