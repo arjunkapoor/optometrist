@@ -1,27 +1,44 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Prescriptions</title>
-	<link rel="stylesheet" type="text/css" href="prescription.css">
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="prescription.js"></script>
-	<script type="text/javascript">
-	</script>
+  <meta charset="UTF-8">
+  <title>Prescriptions</title>
+  <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
 </head>
+
 <body>
-	<p id="presc">
-		Prescription
-	</p>
-	<div class="spectacle">
-		<button type="button" onclick="spec()">Spectacle</button>
-		<div id="specArea"></div>
+	<!-- Navigation -->
+	<nav id="slide-menu">
+		<ul>
+			<li class="patientinfo"><a href="patientInfo.html">Patient Info</a></li>
+			<li class="appointments"><a href="appointment.html">Appointments</a></li>
+			<li class="prescriptions"><a href="prescription.html">Prescriptions</a></li>
+			<li class="medications"><a href="medications.html">Medications</a></li>
+			<li class="sep logout"><a href="home.html">Logout</a></li>
+		</ul>
+	</nav>
+	
+	<!-- Content panel -->
+	<div id="content">
+		<div>
+			<div class="menu-trigger"></div>
+			<h1>Prescriptions</h1>
+			<div class="spectacleRx">
+				<p class="subheading"><b>Spectacle Rx</b></p>
+			</div>
+			<div class="contactsRx">
+				<p class="subheading"><b>Prescription Contacts Rx</b></p>
+			</div>
+			<div class="codes">
+				<p class="subheading"><b>Diagnostic Codes</b></p>
+			</div>
+		</div>
 	</div>
-	<div class="contact_lens">
-		<button type="button" onclick="cLens()">Contact Lens Rx</button>
-		<div id="lensArea"></div>
-	</div>
-	<div class="dignostic_codes">
-		<button type="button" onclick="diagCode()">Diagnostic Codes</button>
-		<div id="diagArea"></div>
-	</div>
+
+	<!--Slide Menu Script-->
+	<script src="slidemenu.js"></script>
+
+</body>
+
+</html>
