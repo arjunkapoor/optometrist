@@ -5,7 +5,7 @@ function check() {
 		var fullName = document.getElementById('insertFullName')
 			$.ajax({
 				type: "GET",
-				url: "patientDataExample.xml",
+				url: "patientData.xml",
 				dataType: "xml",
 				success: function(xml){
 					var firstName = $(xml).find('firstName').text();
@@ -31,4 +31,4 @@ function check() {
 			});//end ajax
 		
      
-     }	 
+     }
