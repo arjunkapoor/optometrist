@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Prescriptions</title>
+  <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+  <script type="text/javascript" src="prescriptions.js"></script>
+</head>
+
+<body>
+
+	<script type="text/javascript">
+                $(document).ready(function(){
+                        getPrescription();
+                });
+    </script>
+	<!-- Navigation -->
+	<nav id="slide-menu">
+		<ul>
+			<li class="patientinfo"><a href="patientInfo.html">Patient Info</a></li>
+			<li class="appointments"><a href="appointment.html">Appointments</a></li>
+			<li class="prescriptions"><a href="prescription.html">Prescriptions</a></li>
+			<li class="medications"><a href="medications.html">Medications</a></li>
+			<li class="sep logout"><a href="home.html">Logout</a></li>
+		</ul>
+	</nav>
+	
+	<!-- Content panel -->
+	<div id="content">
+		<div>
+			<div class="menu-trigger"></div>
+			<h1>Prescriptions</h1>
+			<div class="spectacleRx">
+				<p class="subheading"><b>Spectacle Rx</b></p>
+				<table id='prescriptionTable' cellpadding='15'>
+					<col width="auto">
+					<col width="auto">
+					<col width="auto">
+					<tr>
+					  <td><b><u>Brand Name<u></b></td>
+					  <td><b><u>Generic Name</u></b></td>		
+					  <td><b><u>Srength</u></b></td>
+					  <td><b><u>Stop Date</u></b></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+		</div>
+	</div>
+
+	<!--Slide Menu Script-->
+	<script src="slidemenu.js"></script>
+
+</body>
+
+</html>
